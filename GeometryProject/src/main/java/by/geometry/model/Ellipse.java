@@ -3,24 +3,21 @@ package main.java.by.geometry.model;
 import main.java.by.geometry.exception.GeometryException;
 
 public class Ellipse extends Circle {
-    private double r2; // Второй радиус
-    private Point secondBorderPoint; // Вторая точка на границе
+    private double r2; 
+    private Point secondBorderPoint; 
 
-    // Конструктор с двумя отрезками (радиусы)
     public Ellipse(Segment r1, Segment r2) {
         super(r1);
         this.secondBorderPoint = r2.getEnd();
         setR2(r2.length());
     }
 
-    // Конструктор с тремя точками
     public Ellipse(Point center, Point p1, Point p2) {
         super(center, p1);
         this.secondBorderPoint = p2;
         setR2(center.distanceTo(p2));
     }
 
-    // Конструктор с тремя парами координат
     public Ellipse(double cx, double cy, double x1, double y1, double x2, double y2) {
         super(cx, cy, x1, y1);
         this.secondBorderPoint = new Point(x2, y2);
@@ -35,7 +32,7 @@ public class Ellipse extends Circle {
     }
 
     public double getR1() {
-        return length(); // Первый радиус из Circle
+        return length(); 
     }
 
     public double getR2() {
@@ -55,7 +52,7 @@ public class Ellipse extends Circle {
     }
 
     public Point getFirstBorderPoint() {
-        return getEnd(); // Из Circle
+        return getEnd(); 
     }
 
     @Override
@@ -83,4 +80,5 @@ public class Ellipse extends Circle {
         return String.format("Ellipse[Center=%s, R1=%.2f, R2=%.2f] Area=%.2f Perimeter=%.2f",
                 getStart(), getR1(), getR2(), area(), perimeter());
     }
+
 }
