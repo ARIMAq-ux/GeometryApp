@@ -11,7 +11,7 @@ public class FileReaderUtil {
     private static final DecimalFormatSymbols US_SYMBOLS =
             DecimalFormatSymbols.getInstance(Locale.US);
     private static final DecimalFormat DECIMAL_FORMAT =
-            new DecimalFormat("0.0########", US_SYMBOLS); // до 8 знаков после точки
+            new DecimalFormat("0.0########", US_SYMBOLS); 
 
     private FileReaderUtil() {}
 
@@ -61,7 +61,6 @@ public class FileReaderUtil {
             }
 
             String type = parts[0].toUpperCase();
-            // Используем американскую локаль для парсинга
             Scanner scanner = new Scanner(parts[1]);
             scanner.useLocale(Locale.US);
             scanner.useDelimiter(",");
@@ -181,5 +180,6 @@ public class FileReaderUtil {
         }
         return formatted;
     }
+
 
 }
