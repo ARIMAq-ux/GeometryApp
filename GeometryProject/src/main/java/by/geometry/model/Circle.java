@@ -9,7 +9,7 @@ public class Circle extends Segment implements IFigure {
         validateRadius();
     }
 
-       public Circle(Point center, Point border) {
+    public Circle(Point center, Point border) {
         super(center, border);
         validateRadius();
     }
@@ -55,3 +55,4 @@ public class Circle extends Segment implements IFigure {
     }
 
 }
+
