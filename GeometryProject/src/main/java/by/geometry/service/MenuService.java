@@ -31,7 +31,7 @@ public class MenuService {
                 System.err.println("Error: " + e.getMessage());
             }
 
-            System.out.println(); // пустая строка для читаемости
+            System.out.println(); 
         }
     }
 
@@ -317,4 +317,5 @@ public class MenuService {
             System.out.println("Operation cancelled.");
         }
     }
+
 }
