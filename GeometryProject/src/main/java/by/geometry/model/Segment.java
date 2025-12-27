@@ -5,13 +5,11 @@ import main.java.by.geometry.exception.GeometryException;
 public class Segment extends Point {
     private Point end;
 
-    // Конструктор с двумя точками
     public Segment(Point start, Point end) {
         super(start.getX(), start.getY());
         setEnd(end);
     }
 
-    // Конструктор с двумя парами координат
     public Segment(double x1, double y1, double x2, double y2) {
         super(x1, y1);
         this.end = new Point(x2, y2);
@@ -63,4 +61,5 @@ public class Segment extends Point {
         return String.format("Segment[%s -> %s, length=%.2f]",
                 getStart(), end, length());
     }
+
 }
